@@ -1,9 +1,14 @@
 /** @format */
 
-import "../styles/globals.css";
+import { globalStyles } from "../styles/globals.js";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      {globalStyles}
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 export default MyApp;
